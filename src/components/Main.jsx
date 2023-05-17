@@ -70,15 +70,15 @@ const Main = () => {
             </form>
             </div>
             {
-                load ? <div><i className='bx bx-loader-circle bx-spin bx-lg' ></i></div> :
+                load ? <div><i></i></div> :
             <>
             <Location location={location} />
             {location.residents[0] && <Pages className='py-5 flex content-center justify-center gap-4' quantyPages={quantyPages} page={page} setPage={setPage}/>}
-            <div>
+            <div className='p-10 w-full grid grid-cols-[repeat(auto-fill,minmax(180px,_1fr))] gap-8 mb-10'>
                               
                     {location.residents[0] ? 
                     cardsToShow.map((resident) => (
-                      <section key={resident} className='p-10 w-full grid grid-cols-[repeat(auto-fill,minmax(180px,_1fr))] gap-6 mb-10'><ResidentInfo  resident={resident}/></section>))
+                      <section key={resident}><ResidentInfo  resident={resident}/></section>))
                     
                  :
                     <div className='py-5 flex content-center justify-center text-white'>No existen habitantes en esta Dimension</div>
