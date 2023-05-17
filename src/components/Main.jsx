@@ -74,7 +74,7 @@ const Main = () => {
             <>
             <Location location={location} />
             {location.residents[0] && <Pages className='py-5 flex content-center justify-center gap-4' quantyPages={quantyPages} page={page} setPage={setPage}/>}
-            <div className='p-10 w-full grid grid-cols-[repeat(auto-fill,minmax(180px,_1fr))] gap-8 mb-10'>
+            <div className='p-10 w-full grid grid-cols-[repeat(auto-fill,minmax(180px,_1fr))] gap-20 mb-10'>
                               
                     {location.residents[0] ? 
                     cardsToShow.map((resident) => (
